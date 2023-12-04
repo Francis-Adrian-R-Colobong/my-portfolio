@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" id="themeMode">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Attendance System</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="toggleDarkMode">Toggle Dark Mode</button>
+
+    
+
+   <div class="container">
+    <h1 class="title">ATTENDANCE SYSTEM</h1>
+      <br>
+       <form id="attendanceForm" class="form">
+           <label for="studentID">Student ID:</label>
+           <input type="text" class="box" id="studentID" required>
+           
+           <label for="studentName">Student Name:</label>
+           <input type="text" class="box" id="studentName" required>
+
+           <label for="subjectCode">Subject Code:</label>
+           <select type="text" id="subjectCode" required>
+                <option value="Null"></option>
+                <option value="CC104">CC104</option>
+                <option value="SDF104">SDF104</option>
+                <option value="DS102">DS102</option>
+                <option value="GE7">GE7</option>
+                <option value="GE8">GE8</option>
+                <option value="PE3">PE3</option>
+            </select>
+
+           <label for="status">Status:</label>
+           <select id="status" required>
+               <option value="Null"></option>
+               <option value="Present">Present</option>
+               <option value="Absent">Absent</option>
+               <option value="Late">Late</option>
+           </select>
+
+           <button type="button" onclick="submitAttendance()" class="submit-button">Submit</button>
+       </form>
+
+       <div id="attendanceList" class="attendance-list">
+           <h2 class="title2">Attendance Records</h2>
+           <br>
+           <table id="recordsTable" class="records-table">
+               <thead>
+                   <tr>
+                       <th>Student ID</th>
+                       <th>Student Name</th>
+                       <th>Subject Code</th>
+                       <th>Status</th>
+                       <th>Date and Time</th>
+                       <th>Action</th>
+                   </tr>
+               </thead>
+               <tbody id="recordsList" class="records-list"></tbody>
+           </table>
+       </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>

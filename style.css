@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+    --text-light: #ffffff;
+    --text-dark: #4f545c;
+    --background-light: #f4f4f4;
+    --background-dark: #2b2b2b;
+    --primary-color: #05308dc5;
+    --secondary-color: #1c356bf1;
+    --error-color: #ff4d4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    color: var(--text-light);
+    background-color: var(--background-dark);
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+body.dark-mode .container {
+    background-color: #353535;
+    box-shadow: #d1d5db;
+    color: #ffffff;
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 42px;
+    text-align: left;
+    margin-bottom: 0px;
+    text-indent: 20PX;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.dark-mode .title{
+    color: #f4f4f4;
+    font-size: 42px;
+    text-align: left;
+    margin-bottom: 0px;
+    text-indent: 20PX;
+    font-family: "Poppins", sans-serif;
+}
+
+.dark-mode .records-table th {
+    background-color: #2b2b2ba1;
+    color: var(--text-light);
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: #f7f8fa;
+    color: #4f545c;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: #7289da;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+    background-color: #333; 
+    color: #fff; 
+    border-color: #555;
+}
+
+.form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4f545c;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: #f7f8fa;
+    color: #4f545c;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.attendance-list {
+    margin-top: 30px;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.records-table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.records-list button {
+    background-color: var(--error-color);
+    color: var(--text-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.records-list button:hover {
+    background-color: darken(var(--error-color), 10%);
+}
+
+
